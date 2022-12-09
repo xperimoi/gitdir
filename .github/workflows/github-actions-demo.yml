@@ -14,5 +14,5 @@ jobs:
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: Yamllint yaml file
         run: |
-	yamllint licence-long.yaml
+          yamllint licence-long.yaml
       - run: echo "🍏 This job's status is ${{ job.status }}."
