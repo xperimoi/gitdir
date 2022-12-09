@@ -1,0 +1,32 @@
+$schema: http://stsci.edu/schemas/yaml-schema/draft-01
+type: object
+title: lic
+properties:
+  apiVersion:
+    type: string
+  data:
+    type: "null"
+  nebula.xml:
+    type: string
+  kind:
+    type: string
+  metadata:
+    type: object
+    properties:
+      name:
+        type: string
+      namespace:
+        type: string
+      type:
+        type: string
+    additionalProperties: true
+    required:
+      - name
+      - namespace
+      - type
+additionalProperties: true
+required:
+  - apiVersion
+  - nebula.xml
+  - kind
+  - metadata

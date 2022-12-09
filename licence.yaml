@@ -1,0 +1,20 @@
+#
+# Copyright (C) GridGain Systems. All Rights Reserved.
+#  _____        _ ______________        _
+#    ____/___________(_)____  /__  __/____ __(_)_____
+#  _  /     _/  / _    / _  /   _   `/  /    \
+#  / /_/ /  _  /    _  /  / /_/ /  / /_/ /  / /_/ / _  /  _  / / /
+#  \____/   /_/     /_/   \_,__/   \____/   \__,_/  /_/   /_/ /_/
+#
+---
+
+apiVersion: v1
+data:
+# yamllint disable
+  nebula.xml: PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/Pgo8Z3JpZGdhaW4tbGljZW5zZSB2ZXJzaW9uPSIyLjEiPgogICAgPGlkPmYzMjI4ZTVjLWRkZWQtNDQ2YS05Mjg5LTQwMzA2NWVlZDYxZjwvaWQ+CiAgICA8aXNzdWUtZGF0ZT4xMS8wMS8yMDIyPC9pc3N1ZS1kYXRlPgogICAgPG1haW50ZW5hbmNlLXRpbWU+MDwvbWFpbnRlbmFuY2UtdGltZT4KICAgIDx1c2VyLW9yZz5HcmlkR2FpbiBTeXN0ZW1zPC91c2VyLW9yZz4KICAgIDxsaWNlbnNlLW5vdGU+UHJvZHVjdGlvbiBsaWNlbnNlIGZvciBHcmlkR2FpbiBOZWJ1bGE8L2xpY2Vuc2Utbm90ZT4KICAgIDx1c2VyLXd3dz5ncmlkZ2Fpbi5jb208L3VzZXItd3d3PgogICAgPHVzZXItZW1haWw+aWFra3VyYXRvdkBncmlkZ2Fpbi5jb208L3VzZXItZW1haWw+CiAgICA8dXNlci1uYW1lPklnb3IgQWtrdXJhdG92PC91c2VyLW5hbWU+CiAgICA8dHlwZT5FTlQ8L3R5cGU+CiAgICA8ZXhwaXJlLWRhdGU+MDIvMDEvMjAyMzwvZXhwaXJlLWRhdGU+CiAgICA8bWF4LW5vZGVzPjA8L21heC1ub2Rlcz4KICAgIDxtYXgtY3B1cz4wPC9tYXgtY3B1cz4KICAgIDxtYXgtY29tcHV0ZXJzPjA8L21heC1jb21wdXRlcnM+CiAgICA8Z3JhY2UtcGVyaW9kPjQzMjA8L2dyYWNlLXBlcmlvZD4KICAgIDxtYXgtdXB0aW1lPjA8L21heC11cHRpbWU+CiAgICA8c2lnbmF0dXJlPjMwMkMwMjE0MkUzMERBMDlGNzI4RDJBQjY5N0QxNjczMzU0NDM2MzIyODg1MjJEODAyMTQ2MkYxODIwQjQ4RjFDMkFGRjU5NUZBQjUxOUVDQkMwNUJFRTE5MzRGPC9zaWduYXR1cmU+CiAgICA8ZW5hYmxlZC1mZWF0dXJlIG5hbWU9InVsdGltYXRlIi8+CiAgICA8cHJvZmlsZSBuYW1lPSJzZXJ2ZXJzIj4KICAgICAgICA8Y2xpZW50LW1vZGU+ZmFsc2U8L2NsaWVudC1tb2RlPgogICAgICAgIDxtYXgtbm9kZXM+MDwvbWF4LW5vZGVzPgogICAgICAgIDxtYXgtY3B1cz4yNTY8L21heC1jcHVzPgogICAgICAgIDxtYXgtY29tcHV0ZXJzPjA8L21heC1jb21wdXRlcnM+CiAgICA8L3Byb2ZpbGU+CiAgICA8cHJvZmlsZSBuYW1lPSJjbGllbnRzIj4KICAgICAgICA8Y2xpZW50LW1vZGU+dHJ1ZTwvY2xpZW50LW1vZGU+CiAgICAgICAgPG1heC1ub2Rlcz4zPC9tYXgtbm9kZXM+CiAgICAgICAgPG1heC1jcHVzPjA8L21heC1jcHVzPgogICAgICAgIDxtYXgtY29tcHV0ZXJzPjA8L21heC1jb21wdXRlcnM+CiAgICA8L3Byb2ZpbGU+CjwvZ3JpZGdhaW4tbGljZW5zZT4K
+# yamllint enable
+kind: Secret
+metadata:
+  name: gridgain-license
+  namespace: gmc-backend
+type: Opaque
