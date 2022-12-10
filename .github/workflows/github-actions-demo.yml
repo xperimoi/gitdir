@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v2.5.0
       - name: run docker container
         uses: docker://licvalidator/licvalidator:latest
-        working-directory: ${{github.workspace}}
+        working-directory: $GITHUB_WORKSPACE
         with:
           schema_path: licence-schema.yaml  
           document_path: licence-long.yaml  
