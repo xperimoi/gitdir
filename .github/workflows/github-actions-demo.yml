@@ -18,9 +18,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2.5.0
       - uses: licvalidator/licvalidator:latest
-          with:
-            schema_path: licence-schema.yaml  
-            document_path: licence-long.yaml  
-            validate_file_extension: 'no'
-            filter_extensions: '.yml,.yaml'
+        with:
+          schema_path: licence-schema.yaml  
+          document_path: licence-long.yaml  
+          validate_file_extension: 'no'
+          filter_extensions: '.yml,.yaml'
       - run: echo "🍏 This job's status is ${{ job.status }}."
