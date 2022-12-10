@@ -1,6 +1,17 @@
 name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
+
+inputs:
+  schema_path:
+    required: true
+  document_path:
+    required: true
+  validate_file_extension:
+    required: false 
+  filter_extension:
+    required: false 
+
 jobs:
   validate:
     runs-on: ubuntu-latest
