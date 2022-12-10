@@ -16,8 +16,10 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.5.0
-      - uses: licvalidator/licvalidator:latest
+      - name: check out the repo
+        uses: actions/checkout@v2.5.0
+      - name: run docker container
+        uses: docker://licvalidator/licvalidator:latest
         with:
           schema_path: licence-schema.yaml  
           document_path: licence-long.yaml  
