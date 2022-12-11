@@ -1,29 +1,16 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on:
-  push:
-    inputs:
-      schema_path:
-        required: true
-      document_path:
-        required: true
-      validate_file_extension:
-        required: false 
-      filter_extension:
-        required: false 
+on: [push]
 
 jobs:
-  validate:
+  lic-schema_validation_job:
     runs-on: ubuntu-latest
+    name: Licence Schema validation
     steps:
-      - name: check out the repo
-        uses: actions/checkout@v2.5.0
-      - name: run docker container
-        uses: docker://licvalidator/licvalidator:latest
-        working-directory: $GITHUB_WORKSPACE
+      - name: Checkout
+        uses: actions/checkout@v2.5
+      - name: test a single file
+        id: single
+        uses: xperimoi/gitdir@main
         with:
-          schema_path: licence-schema.yaml  
-          document_path: licence-long.yaml  
-          validate_file_extension: 'no'
-          filter_extensions: '.yml,.yaml'
-      - run: echo "🍏 This job's status is ${{ job.status }}."
+          schema-file: "licence-schema.yaml"
+          test-file: "licence-long.yaml"
+          strict: "nonstrict"
