@@ -6,7 +6,7 @@ jobs:
     name: Licence Schema validation
     steps:
       - name: Checkout
-        uses: actions/checkout@v2.5.0
+        uses: actions/checkout@v2
       - name: test a single file
         id: single
         uses: xperimoi/gitdir@main
