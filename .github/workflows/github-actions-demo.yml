@@ -11,7 +11,7 @@ inputs:
 
 runs:
   using: 'docker' 
-  image: 'licvalidator/licvalidator:latest'
+  image: 'docker://licvalidator/licvalidator:latest'
   args:
     - ${{ input.files }}
     - ${{ input.schema }}
