@@ -10,13 +10,14 @@ inputs:
     required: true
 
 jobs:
-  runs-on: ubuntu-latest 
-  container:
-    image: 'docker://licvalidator/licvalidator:latest'
-  steps:
-  - usesL actions/checkout@v2
-  - name: pass env var
-    run:
-    args:
-    - ${{ input.files }}
-    - ${{ input.schema }}
+  test-job:
+    runs-on: ubuntu-latest 
+    container:
+      image: 'docker://licvalidator/licvalidator:latest'
+    steps:
+    - usesL actions/checkout@v2
+    - name: pass env var
+      run:
+      args:
+      - ${{ input.files }}
+      - ${{ input.schema }}
