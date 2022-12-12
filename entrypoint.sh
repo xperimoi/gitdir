@@ -1,18 +1,16 @@
-#!/bin/sh -l
-#set -e
+#!/bin/bash
 
-echo $3
+set -e
 
-if [ $3 = "strict" ] ; then
-   strict=" "
-   echo "using strict mode "
-else
-    strict=" --no-strict"
-    echo "using non strict mode "
-fi
+INPUT_SCHEMA=schema.yaml
 
+options=(--schema "$INPUT_SCHEMA")
 
-
-yamale --schema $1 $2
-time=$(date)
-echo "::set-output name=time::$time"
+# Enable globstar so ** globs recursively
+#shopt -s globstar
+# Use the current directory by default
+#for file in ${INPUT_FILES:-.}; do
+#    echo " INFO - validating $file"
+#    yamale "${options[@]}" --data-file $file
+done
+yamale "${options[@]}" --data-file file1.yaml
