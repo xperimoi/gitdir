@@ -16,8 +16,5 @@ jobs:
       image: 'docker://licvalidator/licvalidator:latest'
     steps:
     - uses: actions/checkout@v2
-    - name: pass env var
-      run:
-      args:
-      - ${{ input.files }}
-      - ${{ input.schema }}
+      with:
+        args: ${{ input.files }}
