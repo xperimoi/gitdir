@@ -9,9 +9,15 @@ inputs:
     description: 'Schema definition file'
     required: true
 
-runs:
-  using: 'docker' 
-  image: 'docker://licvalidator/licvalidator:latest'
-  args:
-    - ${{ input.files }}
-    - ${{ input.schema }}
+ jobs:
+   testbox:
+   runs-on: ubuntu-latest 
+   container:
+     image: 'docker://licvalidator/licvalidator:latest'
+   steps:
+   - usesL actions/checkout@v2
+   - name: pass env var
+     run:
+     args:
+     - ${{ input.files }}
+     - ${{ input.schema }}
