@@ -10,7 +10,6 @@ inputs:
     required: true
 
 jobs:
-  testbox:
   runs-on: ubuntu-latest 
   container:
     image: 'docker://licvalidator/licvalidator:latest'
