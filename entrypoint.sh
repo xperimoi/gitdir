@@ -12,5 +12,5 @@ options=(--schema "$INPUT_SCHEMA")
 #for file in ${INPUT_FILES:-.}; do
 #    echo " INFO - validating $file"
 #    yamale "${options[@]}" --data-file $file
-done
-yamale "${options[@]}" --data-file file1.yaml
+#done
+yamale "${options[@]}"  file1.yaml
