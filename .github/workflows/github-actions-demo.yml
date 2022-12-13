@@ -15,6 +15,6 @@ jobs:
     steps:
       - name: simple step
         id: hellop
-        uses: licvalidator/licvalidator:latest
+        uses: 'docker://licvalidator/licvalidator:latest'
         with:
           files: 'file1.yaml'
