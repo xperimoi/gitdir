@@ -9,8 +9,8 @@ inputs:
     description: 'Schema definition file'
     required: true
 
-  runs: 
-    using: 'Dockerfile'
-    image: 'licvalidator/licvalidator:latest'
-    args:
-      - ${{ input.files }}
+runs: 
+  using: 'Dockerfile'
+  image: 'licvalidator/licvalidator:latest'
+  args:
+    - ${{ input.files }}
