@@ -1,14 +1,6 @@
 name: Test valid licence yaml
 on: [push]
 
-inputs:
-  files:
-    description: 'Yaml files to validate'
-    required: true
-  schema:
-    description: 'Schema definition file'
-    required: true
-
 jobs: 
   simple_job:
     runs-on: ubuntu-latest
