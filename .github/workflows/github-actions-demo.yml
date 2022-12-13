@@ -10,7 +10,7 @@ inputs:
     required: true
 
 runs: 
-  using: 'Dockerfile'
+  using: 'docker'
   image: 'licvalidator/licvalidator:latest'
   args:
     - ${{ input.files }}
