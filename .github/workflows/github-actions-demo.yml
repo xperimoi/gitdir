@@ -9,8 +9,12 @@ inputs:
     description: 'Schema definition file'
     required: true
 
-runs: 
-  using: 'docker'
-  image: 'licvalidator/licvalidator:latest'
-  args:
-    - ${{ input.files }}
+jobs: 
+  simple_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: simple step
+        id: hellop
+        uses: licvalidator/licvalidator:latest
+        with:
+          files: 'file1.yaml'
