@@ -3,7 +3,7 @@ on: [push]
 
 jobs: 
   simple_job:
-    runs-on: ubuntu:22.04
+    runs-on: ubuntu:latest
     steps:
       - name: simple step
         id: hellop
