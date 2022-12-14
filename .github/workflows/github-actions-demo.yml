@@ -3,7 +3,7 @@ on: [push]
 
 jobs: 
   simple_job:
-    runs-on: self-hosted
+    runs-on: ubuntu:22.04
     steps:
       - name: simple step
         id: hellop
